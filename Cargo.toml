@@ -1,0 +1,26 @@
+[package]
+name = "blehr"
+version = "0.1.0"
+authors = ["Urho Laukkarinen <urho.laukkarinen@gmail.com>"]
+edition = "2021"
+license-file = "LICENSE"
+readme = "README.md"
+description = "A library for reading heart rate from BLE heart rate devices."
+keywords = ["heartrate", "bluetooth", "ble", "hr", "sensor"]
+categories = ["hardware-support"]
+repository = "https://github.com/urholaukkarinen/blehr"
+homepage = "https://github.com/urholaukkarinen/blehr"
+
+[lib]
+name = "blehr"
+path = "src/lib.rs"
+
+[dependencies]
+futures = "0.3.17"
+tokio = { version = "1.11.0", features = ["rt"] }
+uuid = "0.8.2"
+bleasy = "0.1.0"
+log = "0.4.14"
+
+[dev-dependencies]
+tokio = { version = "1.11.0", features = ["macros", "rt", "rt-multi-thread"] }
